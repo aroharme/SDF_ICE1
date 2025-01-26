@@ -31,15 +31,12 @@ public class CardTrick {
         }
         
         //insert code to ask the user for Card value and suit, create their card
-        System.out.print("Please enter a card value: ");
-        int value = input.nextInt();
-        System.out.print("Please enter a card suit (0-3): ");
-        int suit = input.nextInt();
         
+        // add one luckcard hard code 2,clubs
         Card user = new Card();
         
-        user.setSuit(Card.SUITS[suit]);
-        user.setValue(value);
+        user.setSuit(Card.SUITS[2]);
+        user.setValue(9);
         // and search magicHand here
         boolean luckyCardFound = false;
         for (Card card : magicHand) {
@@ -54,7 +51,7 @@ public class CardTrick {
         } else {
             System.out.println("Card not found");
         }
-        // add one luckcard hard code 2,clubs
+        
     }
     
 }
